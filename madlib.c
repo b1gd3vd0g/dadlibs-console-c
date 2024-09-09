@@ -8,6 +8,9 @@
 char *A_DAY_IN_THE_LIFE_OF_A_TEACHER =
     "./templates/day_in_life_of_teacher.txt";
 
+char *BEST_BIG_SISTER =
+    "./templates/best_big_sister.txt";
+
 int MAX_STORY_LEN = 5096;
 int MAX_FP_LEN = 128;
 
@@ -17,13 +20,19 @@ int main(int argc, char **argv)
     printf("A C Program written by BigDevDog\n\n");
     printf("Choose your template:\n\n");
 
-    printf("[1] A day in the life of a teacher\n\n");
+    printf("[1] A day in the life of a teacher\n");
+    printf("[2] Best big sister\n\n");
 
-    int choice = promptInt(1);
+    int choice = promptInt(2);
     char *templatefp;
     if (choice == 1)
     {
         templatefp = A_DAY_IN_THE_LIFE_OF_A_TEACHER;
+    }
+    else if (
+        choice == 2)
+    {
+        templatefp = BEST_BIG_SISTER;
     }
 
     // allocate space for the story string.
